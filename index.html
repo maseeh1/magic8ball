@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic 8 Ball :)</title>
+    <style>
+body{
+    text-align: center;
+}
+[class*="content"] {
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .content {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+}
+}
+button {
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;  
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+button:hover {
+    background-color: #555555;
+    color: white;
+}
+div.eight-ball {
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+div.answer {
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+    margin: 25% auto;
+}
+p#answer {
+    padding: 23px;
+    color: lightblue;
+    letter-spacing: 2px;
+    font-size:18px;
+    }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Magic 8 Ball :)</h1>
+        <p>Concentrate and ask me a question!</p>
+        <button id="answerButton">Ask Me!</button>
+        
+    </div>
+    <div id="eight-ball" class="eight-ball">
+        <div class="answer">
+          <p id="answer"></p>
+        </div>
+      </div>
+            
+    <script>
+
+        document.getElementById('answerButton').onclick = function () {
+        var randomNumber = Math.random();
+        var myRandomNumber = 10* randomNumber;
+        console.log(myRandomNumber);
+
+        switch(true){
+            case myRandomNumber < 1 :
+                document.getElementById("answer").innerHTML = "Yes - definitely.";
+                break;
+            case myRandomNumber < 2 :
+                document.getElementById("answer").innerHTML = "Without a doubt.";
+                break;
+            case myRandomNumber < 3 :
+                document.getElementById("answer").innerHTML = "Yes.";
+                break;
+            case myRandomNumber < 4 :
+                document.getElementById("answer").innerHTML = "As I see it, Yes.";
+                break;
+            case myRandomNumber < 5 :
+                document.getElementById("answer").innerHTML = "Ask again later.";
+                break;
+            case myRandomNumber < 6 :
+                document.getElementById("answer").innerHTML = "Cannot predict now.";
+                break;
+            case myRandomNumber < 7 :
+                document.getElementById("answer").innerHTML = "My reply is no.";
+                break;
+            case myRandomNumber < 8 :
+                document.getElementById("answer").innerHTML = "NOOOO!";
+                break;
+            case myRandomNumber < 9 :
+                document.getElementById("answer").innerHTML = "Of course not!";
+                break;
+            case myRandomNumber < 10 :
+                document.getElementById("answer").innerHTML = "My sources say no.";
+                break;
+            
+        }
+    }
+    </script>
+</body>
+</html>
